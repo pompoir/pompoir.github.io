@@ -21,7 +21,7 @@
   .header {
     padding: 20px;
     text-align: center;
-    background-color: #ab88fc;
+    background-color: #117EE4;
   }
   
   .container {
@@ -44,7 +44,7 @@
   
   /* Navbar styles */
   .navbar {
-    background-color: #ab88fc;
+    background-color: #1B88EE;
     display: flex;
     justify-content: space-between;
   }
@@ -133,7 +133,7 @@
   /* Dark mode styles */
   body.dark-mode {
     background-color: #333;
-    color: #fff;
+    color: #E0E2DB;
   }
   
   body.dark-mode .header,
@@ -144,7 +144,7 @@
   
   body.dark-mode .navbar a,
   body.dark-mode .dropdown-content a {
-    color: #fff;
+    color: #E0E2DB;
   }
   
   body.dark-mode .navbar a:hover,
@@ -162,5 +162,5 @@
   }
   
   body.dark-mode #theme-toggle {
-    border-color: #fff;
+    border-color: #E0E2DB;
   }
