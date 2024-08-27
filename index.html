@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Sandy Fletcher</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -65,25 +66,27 @@
 									<li><a href="https://x.com/arenaceous_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="https://github.com/pompoir" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-								<form method="post" action="#">
+								<form action="https://api.web3forms.com/submit" method="POST">
+									<input type="hidden" name="access_key" value="c5a7499c-72b7-42b0-ad0d-55e8bd5af782">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required/>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" required rows="4"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 								</form>
 							</article>
 						<!-- Elements -->
