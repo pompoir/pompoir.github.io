@@ -43,6 +43,7 @@
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>What I've been up to:</p>
 								<p><ul>
+									<li><a href="#godot1">Godot 1.0</a></li>
 									<li><a href="#template">Water Closet</a></li>
 									<li><a href="#bed">Make Your Bed</a></li>
 									<li><a href="#template">Warrior Wedding Wear</a></li>
@@ -315,6 +316,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 									<h4>Preformatted</h4>
 							</article>
+						<!--- Godot 1.0 --->
+						<article id="godot1">
+							<h2 class="major">Godot 1.0</h2>
+							<section>
+								<p>Steps of building game, but game first.
+								<hr />
+								<div id="game-container"></div>
+ 								<script src="guppy/guppygauntlet.js"></script>
+   								 <script>
+							        // Initialize the game
+  								      window.onload = function() {
+ 						           // Assuming the game uses an object named `GuppyGauntlet` and a method to start it
+ 						           if (typeof GuppyGauntlet !== 'undefined') {
+ 						               const gameContainer = document.getElementById('game-container');
+  						              GuppyGauntlet.initialize(gameContainer); // Or the appropriate method to initialize your game
+   							         } else {
+   							             console.error('GuppyGauntlet is not defined. Make sure guppygauntlet.js is correctly loaded.');
+   							         }
+    						    };
+   								 </script>
+								<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+								<h4>Preformatted</h4>
+						</article>
 						<!--- Bed --->
 						<article id="bed">
 							<h2 class="major">Make Your Bed</h2>
