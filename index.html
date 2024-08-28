@@ -323,19 +323,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<section>
 								<p>Steps of building game, but game first.</p>
 								<hr />
-								<div id="game-container" style="width: 800px; height: 600px;"></div>
-								<script src="guppy/guppygauntlet.js"></script>
+								<canvas id="canvas"></canvas>
+								<script src="guppygauntlet.js"></script>
 								<script>
+									const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"guppygauntlet","experimentalVK":false,"fileSizes":{"guppygauntlet.pck":99378352,"guppygauntlet.wasm":35708238},"focusCanvas":true,"gdextensionLibs":[]};
+									
 									window.onload = function() {
-										const gameContainer = document.getElementById('game-container');
-										if (typeof GuppyGauntlet !== 'undefined' && GuppyGauntlet.initialize) {
-											GuppyGauntlet.initialize(gameContainer);
-										} else if (typeof Engine !== 'undefined' && Engine.startGame) {
-											Engine.startGame(gameContainer);
-										} else {
-											console.error('Game initialization failed. Make sure guppygauntlet.js is correctly loaded and exports the expected functions.');
-											gameContainer.innerHTML = 'Failed to load the game. Please check the console for errors.';
-										}
+										const engine = new Engine(GODOT_CONFIG);
+										engine.startGame().then(() => {
+											console.log("Game started successfully");
+										}).catch(err => {
+											console.error("Failed to start the game:", err);
+											document.getElementById('canvas').innerHTML = 'Failed to load the game. Please check the console for errors.';
+										});
 									};
 								</script>
 							</section>
