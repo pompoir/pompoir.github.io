@@ -321,23 +321,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<article id="godot1">
 							<h2 class="major">Godot 1.0</h2>
 							<section>
-								<p>Steps of building game, but game first.
+								<p>Steps of building game, but game first.</p>
 								<hr />
-								<div id="game-container"></div>
- 								<script src="guppy/guppygauntlet.js"></script>
-   								 <script>
-							        // Initialize the game
-  								      window.onload = function() {
- 						           // Assuming the game uses an object named `GuppyGauntlet` and a method to start it
- 						           if (typeof GuppyGauntlet !== 'undefined') {
- 						               const gameContainer = document.getElementById('game-container');
-  						              GuppyGauntlet.initialize(gameContainer); // Or the appropriate method to initialize your game
-   							         } else {
-   							             console.error('GuppyGauntlet is not defined. Make sure guppygauntlet.js is correctly loaded.');
-   							         }
-    						    };
-   								 </script>
-						</article>
+								<div id="game-container" style="width: 800px; height: 600px;"></div>
+								<script src="guppy/guppygauntlet.js"></script>
+								<script>
+									window.onload = function() {
+										const gameContainer = document.getElementById('game-container');
+										if (typeof GuppyGauntlet !== 'undefined' && GuppyGauntlet.initialize) {
+											GuppyGauntlet.initialize(gameContainer);
+										} else if (typeof Engine !== 'undefined' && Engine.startGame) {
+											Engine.startGame(gameContainer);
+										} else {
+											console.error('Game initialization failed. Make sure guppygauntlet.js is correctly loaded and exports the expected functions.');
+											gameContainer.innerHTML = 'Failed to load the game. Please check the console for errors.';
+										}
+									};
+								</script>
+							</section>
+						</article>		
 						<!--- Bed --->
 						<article id="bed">
 							<h2 class="major">Make Your Bed</h2>
