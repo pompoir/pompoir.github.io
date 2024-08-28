@@ -323,12 +323,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<section>
 								<p>Steps of building game, but game first.</p>
 								<hr />
-								<canvas id="canvas"></canvas>
+								<canvas id="canvas" style="width: 800px; height: 600px;"></canvas>
 								<script src="guppy/guppygauntlet.js"></script>
 								<script>
-									const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"guppygauntlet","experimentalVK":false,"fileSizes":{"guppygauntlet.pck":99378352,"guppygauntlet.wasm":35708238},"focusCanvas":true,"gdextensionLibs":[]};
+									const GODOT_CONFIG = {
+										"args": [],
+										"canvasResizePolicy": 2,
+										"executable": "guppy/guppygauntlet",
+										"experimentalVK": false,
+										"fileSizes": {
+											"guppy/guppygauntlet.pck": 99378352,
+											"guppy/guppygauntlet.wasm": 35708238
+										},
+										"focusCanvas": true,
+										"gdextensionLibs": []
+									};
 									
-									window.onload = function() {
+									document.addEventListener('DOMContentLoaded', (event) => {
 										const engine = new Engine(GODOT_CONFIG);
 										engine.startGame().then(() => {
 											console.log("Game started successfully");
@@ -336,7 +347,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											console.error("Failed to start the game:", err);
 											document.getElementById('canvas').innerHTML = 'Failed to load the game. Please check the console for errors.';
 										});
-									};
+									});
 								</script>
 							</section>
 						</article>		
