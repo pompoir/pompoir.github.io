@@ -323,32 +323,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<section>
 								<p>Steps of building game, but game first.</p>
 								<hr />
-								<canvas id="canvas" style="width: 480px; height: 720px;"></canvas>
-								<script src="guppy/guppygauntlet.js"></script>
-								<script>
-									const GODOT_CONFIG = {
-										"args": [],
-										"canvasResizePolicy": 2,
-										"executable": "guppy/guppygauntlet",
-										"experimentalVK": false,
-										"fileSizes": {
-											"guppy/guppygauntlet.pck": 99378352,
-											"guppy/guppygauntlet.wasm": 35708238
-										},
-										"focusCanvas": true,
-										"gdextensionLibs": []
-									};
-									
-									document.addEventListener('DOMContentLoaded', (event) => {
-										const engine = new Engine(GODOT_CONFIG);
-										engine.startGame().then(() => {
-											console.log("Game started successfully");
-										}).catch(err => {
-											console.error("Failed to start the game:", err);
-											document.getElementById('canvas').innerHTML = 'Failed to load the game. Please check the console for errors.';
-										});
-									});
-								</script>
+								<article id="godot1">
+									<h2 class="major">Guppy Gauntlet 0.1</h2>
+									<span class="image main"><img src="images/guppy_gauntlet.jpg" alt="Guppy Gauntlet Screenshot" /></span>
+									<section>
+										<p>Play the game below, or check it out on <a href="https://pompoir.itch.io/guppy-gauntlet-01" target="_blank">itch.io</a>.</p>
+										<hr />
+										<iframe frameborder="0" src="https://itch.io/embed-upload/11331031?color=333333" allowfullscreen="" width="480" height="740">
+											<a href="https://pompoir.itch.io/guppy-gauntlet-01">Play Guppy Gauntlet 0.1 on itch.io</a>
+										</iframe>
+									</section>
+								</article>		
 							</section>
 						</article>		
 						<!--- Bed --->
