@@ -288,13 +288,6 @@ input, select, textarea {
 
 	.align-center {
 		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	
-	.align-center > * {
-		max-width: 100%;
 	}
 
 	.align-right {
@@ -1660,3 +1653,24 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Game Container */
+
+	.game-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 20px 0;
+	}
+	
+	.game-container iframe {
+		max-width: 100%;
+		height: auto;
+		aspect-ratio: 480 / 740;
+	}
+	
+	@media (max-width: 480px) {
+		.game-container iframe {
+			width: 100%;
+		}
+	}
